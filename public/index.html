@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device‑width, initial-scale=1.0" />
+  <title>News App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="desktop-message" class="desktop-only">
+    Pour accéder aux nouvelles, utilisez un téléphone mobile.
+  </div>
+
+  <div id="mobile-view" class="mobile-only">
+    <!-- Zone pour affichage d’une “une” -->
+    <div id="main-article" class="main-article">
+      <!-- L’image de fond + fondu noir + titre sur noir -->
+      <div class="main-image-container">
+        <img id="main-img" src="" alt="Image principale" />
+        <div class="overlay"></div>
+        <h1 id="main-title">Titre principal</h1>
+      </div>
+    </div>
+
+    <!-- Zone pour les autres news -->
+    <div id="other-news" class="other-news">
+      <!-- On remplira via JS -->
+    </div>
+  </div>
+
+  <!-- Éditeur (caché par défaut) -->
+  <div id="editor" class="editor-panel">
+    <div id="editor-login">
+      <label>Code d’accès :</label>
+      <input type="password" id="editor-code" />
+      <button id="editor-login-btn">Entrer</button>
+    </div>
+    <div id="editor-main" style="display: none;">
+      <button id="btn-new-news">Créer une news</button>
+      <button id="btn-two-image-news">Créer une news avec deux images</button>
+      <button id="btn-breaking-news">Créer une breaking news</button>
+
+      <div id="form-news" class="form-news">
+        <h3 id="form-title">Créer une news</h3>
+        <input type="text" id="input-title" placeholder="Titre" /><br/>
+        <input type="text" id="input-summary" placeholder="Résumé" /><br/>
+        <textarea id="input-content" placeholder="Contenu complet"></textarea><br/>
+        <input type="text" id="input-image1" placeholder="URL de l’image 1" /><br/>
+        <input type="text" id="input-image2" placeholder="URL de l’image 2 (optionnelle)" /><br/>
+        <input type="text" id="input-tags" placeholder="Tags (séparés par des virgules)" /><br/>
+        <button id="submit-news">Soumettre</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
